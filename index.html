@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Beras RG</title>
+	<link rel="shortcut icon" href="img/logo_title.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Live Chat Styles -->
+<style>
+  #chatWidget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    z-index: 9999;
+    transition: width 0.3s, height 0.3s;
+  }
+  #chatHeader {
+    background: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  #chatHeader button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin-left: 8px;
+    cursor: pointer;
+  }
+  #chatMessages {
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+    font-size: 14px;
+  }
+  #chatInput {
+    display: flex;
+    border-top: 1px solid #ccc;
+  }
+  #chatInput input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+  }
+  #chatInput button {
+    padding: 10px 15px;
+    border: none;
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 0 12px 0;
+    font-weight: bold;
+  }
+  #toggleBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 50%;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 20px;
+    z-index: 9998;
+    cursor: pointer;
+  }
+  .chat-btn-group button {
+    margin-left: 5px;
+    border-radius: 6px;
+    padding: 6px 10px;
+    background: #388E3C;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+
+</head>
+<body>
+	<!--header--->
+	<header>
+		<a href="#" class="logo">TOKO BERAS RAWA GENI</a>
+		<div class="bx bx-menu" id="menu-icon"></div>
+
+		<ul class="navbar">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#package">Package</a></li>
+			<li><a href="#destination">Destination</a></li>
+			<li><a href="#contact_us">Contact Us</a></li>
+			<li><a href="pembayaran.html">Payment</a></li>
+		</ul>
+	</header>
+
+	<!--Home section--->
+	<section class="home" id="home">
+		<div class="home-text">
+			<h1>Beras <br> Berkualitas</h1>
+			<p>Harga Bersahabat<br>Pelayanan Terpercaya.</p>
+			<a href="https://api.whatsapp.com/send?phone=6285157714361" class="home-btn">Pesan Sekarang</a>
+		</div>
+	</section>
+
+	<!--container--->
+	<section class="container">
+		<div class="text">
+			<h2>Deskripsi toko beras</h2>
+			<br><br><br>
+			<p>Toko Beras Rawageni hadir sebagai solusi terpercaya untuk memenuhi kebutuhan beras masyarakat. 
+				Kami berkomitmen menyediakan beras berkualitas tinggi dengan harga yang terjangkau, serta layanan yang ramah dan profesional. 
+				Dengan beragam pilihan beras terbaik, kami memastikan setiap pelanggan mendapatkan beras yang sesuai untuk rumah tangga maupun usaha kuliner.  
+				Kami percaya bahwa beras yang baik adalah dasar dari hidangan yang lezat dan bergizi. Oleh karena itu, kami selalu menjaga kualitas produk,
+				 ketersediaan stok, serta pengiriman cepat ke berbagai wilayah.</p>
+		</div>
+
+	</section> 
+
+	<!--Package section--->
+	<section class="package" id="package">
+		<div class="title">
+			<h2>Bagian<br>rekomendasi</h2>
+			<p>Cek rekomendasi kami! Beras pilihan ini paling banyak diminati pelanggan karena kualitasnya yang unggul dan rasa yang pulen sempurna.</p>
+		</div>
+
+		<div class="package-content">
+			<div class="box">
+				<div class="thum">
+					<img src="img/Ujung-Genteng-Sukabumi.jpg">
+					<h3></h3>
+				</div>
+
+				<div class="dest-content">
+					<div class="location">
+						<h4>Pantai Ujung Genteng</h4>
+						<p><b>Rp </b>300.000</p>
+					</div>
+					<div class="stars">
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="thum">
+					<img src="img/gantungan.jpg">
+					<h3></h3>
+				</div>
+
+				<div class="dest-content">
+					<div class="location">
+						<h4>Karang gantungan</h4>
+						<p><b>Rp </b>450.000</p>
+					</div>
+					<div class="stars">
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="thum">
+					<img src="img/cimarinjung.jpg">
+					<h3></h3>
+				</div>
+
+				<div class="dest-content">
+					<div class="location">
+						<h4>Cimarinjung</h4>
+						<p><b>Rp </b>300.000</p>
+					</div>
+					<div class="stars">
+						<a href="#"><i class='bx bxs-star'></i></a>
+						<a href="#"><i class='bx bxs-star'></i></a>
+						</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<!--destination section--->
+	<section class="destination" id="destination">
+		<div class="title">
+			<h2>Bagian list<br>beras</h2>
+			<br><br>
+			<p>harga beras per5kg
+Temukan berbagai pilihan beras berkualitas dengan harga terjangkau
+</p>
+		</div>
+
+		<div class="destination-content">
+			<div class="col-content">
+				<img src="img/rojolele.jpg">
+				<h5>ROJO LELE</h5>
+				<p>Rp. 75.000,-</p>
+			</div>
+
+			<div class="col-content">
+				<img src="img/beras merah.jpg">
+				<h5>BERAS MERAH</h5>
+				<p>Rp. 20.000,-</p>
+			</div>
+
+			<div class="col-content">
+				<img src="img/bmw.jpg">
+				<h5>BMW</h5>
+				<p>Rp. 70.000,-</p>
+			</div>
+
+			<div class="col-content">
+				<img src="img/bunga.jpg">
+				<h5>BERAS BUNGA</h5>
+				<p>Rp. 30.000,-</p>
+			</div>
+
+			<div class="col-content">
+				<img src="img/kembang.jpg">
+				<h5>BERAS KEMBANG</h5>
+				<p>Rp. 89.000,-</p>
+			</div>
+
+			<div class="col-content">
+				<img src="img/petruk.jpg">
+				<h5>BERAS PETRUK</h5>
+				<p>Rp.11.000,-</p>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- contact start -->
+	<section id="contact_us">
+		<div class="container">
+			<form action="mailto:meitrilaela2@gmail.com">
+				<h2>Form</h2>
+			  <label for="fname">First Name</label>
+			  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+		  
+			  <label for="lname">Last Name</label>
+			  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+		  
+			  <label for="country">Country</label>
+			  <select id="country" name="country">
+				<option value="australia">Indonesia</option>
+				<option value="canada">Malaysia</option>
+				<option value="usa">Singapore</option>
+				<option value="australia">Thailand</option>
+				<option value="canada">Vietnam</option>
+				<option value="usa">China</option>
+				<option value="australia">Australia</option>
+				<option value="canada">Canada</option>
+				<option value="usa">USA</option>
+			  </select>
+		  
+			  <label for="subject">Subject</label>
+			  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+		  
+			  <input type="submit" value="Submit">
+		  
+			</form>
+		  </div>
+	</section>
+	<!-- contact ends -->
+	<!--footer--->
+	<section id="contact">
+		<div class="footer">
+			<div class="main">
+				<div class="list">
+					<!-- <h4>Quick Links</h4>
+					<ul>
+						<li><a href="#">About us</a></li>
+						<li><a href="#">Terms & Conditions</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Help</a></li>
+						<li><a href="#">Tour</a></li>
+					</ul> -->
+				</div>
+				
+				
+
+				<div class="list">
+					<h4>Contact Info</h4>
+					<ul>
+						<li><a href="#">98 West 21th Street</a></li>
+						<li><a href="#">Sukabumi West Java</a></li>
+						<li><a href="https://api.whatsapp.com/send?phone=6288212843490">+62 882-1284-3490</a></li>
+						<li><a href="#">Arahsari@gmail.com</a></li>
+						<li><a href="https://api.whatsapp.com/send?phone=6288212843490">+62 882-1284-3490</a></li>
+					</ul>
+				</div>
+
+				<div class="list">
+					<h4>Connect</h4>
+					<div class="social">
+						<a href="https://web.facebook.com/"><i class='bx bxl-facebook' ></i></a>
+						<a href="https://web.instagram.com/"><i class='bx bxl-instagram-alt' ></i></a>
+						<a href="https://web.twitter.com/"><i class='bx bxl-twitter' ></i></a>
+						<a href="https://www.linkedin.com/"><i class='bx bxl-linkedin' ></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="end-text">
+			<p>Copyright ©2022 All rights reserved | Made with by Arah Sari Putra</p>
+		</div>
+	</section>
+
+	<!--link to js--->
+	<script type="text/javascript" src="js/script.js"></script>
+
+	<!--Live Chat Resource All-->
+
+	<!-- Live Chat HTML -->
+<button id="toggleBtn" onclick="openChat()">💬</button>
+
+<div id="chatWidget">
+  <div id="chatHeader">
+    <span>Live Chat</span>
+    <div class="chat-btn-group">
+      <button onclick="resizeChat()">⤢</button>
+      <button onclick="minimizeChat()">−</button>
+      <button onclick="closeChat()">×</button>
+    </div>
+  </div>
+  <div id="chatMessages"></div>
+  <div id="chatInput">
+    <input type="text" id="userInput" placeholder="Ketik di sini...">
+    <button onclick="sendMessage()">Kirim</button>
+  </div>
+</div>
+
+<!-- Live Chat Script -->
+<script>
+  let minimized = false;
+  let expanded = false;
+
+  function openChat() {
+    document.getElementById("chatWidget").style.display = "flex";
+    document.getElementById("toggleBtn").style.display = "none";
+    showMessage("bot", `👋 Halo, selamat datang di <b>Toko Beras Rawa Geni</b>!<br>Saya adalah <b>asisten virtual</b> yang siap membantu Anda 😊<br><br>✨ Berikut beberapa hal yang bisa saya bantu:<br>1️⃣ Lihat daftar harga beras<br>2️⃣ Tanyakan jenis beras<br>3️⃣ Info ketersediaan stok<br>4️⃣ Buat pemesanan<br><br>Silakan ketik angka sesuai kebutuhan Anda 👇<br>Contoh: <i>1</i>`);
+  }
+
+  function closeChat() {
+    document.getElementById("chatWidget").style.display = "none";
+    document.getElementById("toggleBtn").style.display = "block";
+    document.getElementById("chatMessages").innerHTML = "";
+    minimized = false;
+    expanded = false;
+    document.getElementById("chatWidget").style.width = "320px";
+  }
+
+  function minimizeChat() {
+    minimized = !minimized;
+    document.getElementById("chatMessages").style.display = minimized ? "none" : "block";
+    document.getElementById("chatInput").style.display = minimized ? "none" : "flex";
+  }
+
+  function resizeChat() {
+    expanded = !expanded;
+    const chatBox = document.getElementById("chatWidget");
+    chatBox.style.width = expanded ? "500px" : "320px";
+    minimized = false;
+    document.getElementById("chatMessages").style.display = "block";
+    document.getElementById("chatInput").style.display = "flex";
+  }
+
+  function showMessage(sender, text) {
+    const div = document.createElement("div");
+    div.innerHTML = `<b>${sender === 'bot' ? 'Bot' : 'Anda'}:</b> ${text}`;
+    document.getElementById("chatMessages").appendChild(div);
+    document.getElementById("chatMessages").scrollTop = document.getElementById("chatMessages").scrollHeight;
+  }
+
+  function sendMessage() {
+    const input = document.getElementById("userInput");
+    const text = input.value.trim();
+    if (!text) return;
+
+    showMessage("user", text);
+    input.value = "";
+
+    if (text === "1") {
+      showMessage("bot", `📋 <b>Daftar Harga Beras Terbaru</b> (per 5kg):<br>- Rojolele — Rp 78.000<br>- Kembang — Rp 65.000<br>- Bunga — Rp 56.000<br>- BMW — Rp 90.000<br>- Beras Merah — Rp 93.000<br>- Petruk — Rp 85.000<br>- Ramos — Rp 70.000<br><br>Ingin langsung pesan?<br>Ketik: <i>pesan [nama beras] [jumlah kg]</i><br>Contoh: <i>pesan Petruk 5kg</i>`);
+    } else if (text === "2") {
+      showMessage("bot", `📦 <b>Kami menyediakan beberapa jenis beras unggulan:</b><br>🌾 <b>BMW</b> – aromatik, pulen<br>🌾 <b>Petruk</b> – favorit keluarga<br>🌾 <b>Beras Merah</b> – sehat, rendah gula<br><br>Butuh saran sesuai kebutuhan Anda?<br>Ketik: <i>saran</i>`);
+    } else if (text.toLowerCase() === "saran") {
+      showMessage("bot", `🔍 <b>Ingin beras pera atau pulen?</b><br><br>📌 Untuk beras <b>pera</b>, kami menyarankan:<br>- Bunga<br><br>📌 Untuk beras <b>pulen</b>, kami menyarankan:<br>- BMW<br>- Ramos`);
+    } else if (text === "3") {
+      showMessage("bot", `💡 Semua jenis beras saat ini <b>tersedia</b>.<br>Namun stok bisa berubah dengan cepat.<br><br>Silakan tulis nama beras yang ingin Anda cek:<br>Contoh: <i>stok Kembang</i>`);
+    } else if (text.toLowerCase().startsWith("stok ")) {
+      const jenis = text.split(" ")[1];
+      showMessage("bot", `📦 Saat ini beras ${jenis} <b>ready</b>.`);
+    } else if (text === "4") {
+      showMessage("bot", `📝 Silakan tulis format pemesanan seperti berikut:<br><i>pesan [nama beras] [jumlah]</i><br>Contoh: <i>pesan Petruk 20kg</i><br><br>Contoh respon:<br>20kg beras Petruk<br>Total: <b>Rp 340.000</b><br><br>Setelah itu, Anda akan diarahkan ke WhatsApp untuk konfirmasi 🚀`);
+    } else if (text.toLowerCase().startsWith("pesan ")) {
+      const encoded = encodeURIComponent(text);
+      const waLink = `https://wa.me/6285157714361?text=${encoded}`;
+      showMessage("bot", `📦 Pesanan Anda siap dikonfirmasi!<br>Klik link berikut untuk melanjutkan via WhatsApp:<br><a href="${waLink}" target="_blank">Kirim via WhatsApp</a>`);
+    } else {
+      showMessage("bot", `❓ Maaf, saya tidak memahami input tersebut.<br>Silakan pilih angka dari <b>1</b> hingga <b>4</b>, atau ketik <i>saran</i>`);
+    }
+  }
+</script>
+
+
+
+</body>
+</html>
